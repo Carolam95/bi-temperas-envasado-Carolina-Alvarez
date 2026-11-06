@@ -1,0 +1,350 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 },
+      "id": 100,
+      "title": "ESTADO OPERATIVO EN VIVO (NEAR REAL-TIME)",
+      "type": "row"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "orange", "value": 75 },
+              { "color": "green", "value": 90 }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 1 },
+      "id": 1,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT dm.codigo_maquina AS metric, ROUND(AVG(fp.disponibilidad_pct), 1) AS value FROM bi_temperas.fact_produccion fp JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina') GROUP BY dm.codigo_maquina ORDER BY dm.codigo_maquina;",
+          "refId": "A"
+        }
+      ],
+      "title": "Disponibilidad Promedio por Línea (%)",
+      "type": "gauge"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "blue", "value": null }]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 1 },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["sum"], "fields": "", "values": false },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT SUM(fp.pacas_producidas) AS value FROM bi_temperas.fact_produccion fp JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina');",
+          "refId": "A"
+        }
+      ],
+      "title": "Total Pacas Producidas Acumuladas",
+      "type": "stat"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "orange", "value": 500 },
+              { "color": "red", "value": 2000 }
+            ]
+          },
+          "unit": "h"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 6, "w": 6, "x": 12, "y": 1 },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["sum"], "fields": "", "values": false },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT ROUND(SUM(duracion_horas), 1) AS value FROM bi_temperas.fact_paros fp JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina');",
+          "refId": "A"
+        }
+      ],
+      "title": "Tiempo Total de Paro Acumulado",
+      "type": "stat"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 1 }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 6, "w": 6, "x": 18, "y": 1 },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT COUNT(*) AS value FROM bi_temperas.fact_paros fp JOIN bi_temperas.dim_severidad_paro dsp ON fp.severidad_key = dsp.severidad_key WHERE dsp.es_alerta_grafana = true;",
+          "refId": "A"
+        }
+      ],
+      "title": "Alertas Críticas Activas (>45 min)",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 7 },
+      "id": 101,
+      "title": "HISTÓRICO Y SERIES DE TIEMPO DE PAROS",
+      "type": "row"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "bars",
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "spanNulls": false,
+            "showPoints": "auto",
+            "pointSize": 5,
+            "stacking": { "group": "A", "mode": "normal" },
+            "axisPlacement": "auto"
+          },
+          "color": { "mode": "palette-classic" },
+          "unit": "m"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 14, "x": 0, "y": 8 },
+      "id": 5,
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom" },
+        "tooltip": { "mode": "single" }
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "time_series",
+          "rawSql": "SELECT df.fecha AS time, SUM(fp.duracion_minutos) AS value, dcp.area_impacto AS metric FROM bi_temperas.fact_paros fp JOIN bi_temperas.dim_fecha df ON fp.fecha_key = df.fecha_key JOIN bi_temperas.dim_codigo_paro dcp ON fp.codigo_paro_key = dcp.codigo_paro_key JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina') GROUP BY df.fecha, dcp.area_impacto ORDER BY df.fecha;",
+          "refId": "A"
+        }
+      ],
+      "title": "Minutos de Paro por Día y Área de Impacto",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 10, "x": 14, "y": 8 },
+      "id": 6,
+      "options": {
+        "legend": { "displayMode": "table", "placement": "right", "values": ["percent", "value"] },
+        "pieType": "donut",
+        "reduceOptions": { "calcs": ["sum"], "fields": "", "values": false },
+        "tooltip": { "mode": "single" }
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT dcp.area_impacto AS metric, ROUND(SUM(fp.duracion_horas), 1) AS value FROM bi_temperas.fact_paros fp JOIN bi_temperas.dim_codigo_paro dcp ON fp.codigo_paro_key = dcp.codigo_paro_key JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina') GROUP BY dcp.area_impacto ORDER BY value DESC;",
+          "refId": "A"
+        }
+      ],
+      "title": "Distribución de Pérdidas por Área de Impacto",
+      "type": "piechart"
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 16 },
+      "id": 102,
+      "title": "REGISTRO DETALLADO DE EVENTOS RECIENTES",
+      "type": "row"
+    },
+    {
+      "datasource": "PostgreSQL-BITemperas",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "custom": { "align": "auto", "displayMode": "auto" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green", "value": null }]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "nivel_severidad" },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    { "color": "blue", "value": null },
+                    { "color": "yellow", "value": 2 },
+                    { "color": "red", "value": 4 }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 17 },
+      "id": 7,
+      "options": {
+        "footer": { "enablePagination": true, "show": true },
+        "showHeader": true,
+        "sortBy": [{ "desc": true, "displayName": "fecha_registro" }]
+      },
+      "pluginVersion": "10.4.0",
+      "targets": [
+        {
+          "datasource": "PostgreSQL-BITemperas",
+          "format": "table",
+          "rawSql": "SELECT fp.paro_id, df.fecha, dm.codigo_maquina, dt.nombre_turno, dcp.codigo_paro_texto, COALESCE(dcp.descripcion_subcodigo, 'General') AS detalle_falla, ROUND(fp.duracion_minutos, 1) AS duracion_min, dsp.nivel_severidad, dai.nombre_personal AS tecnico_atencion, fp.fecha_registro FROM bi_temperas.fact_paros fp JOIN bi_temperas.dim_fecha df ON fp.fecha_key = df.fecha_key JOIN bi_temperas.dim_maquina dm ON fp.maquina_key = dm.maquina_key JOIN bi_temperas.dim_turno dt ON fp.turno_key = dt.turno_key JOIN bi_temperas.dim_codigo_paro dcp ON fp.codigo_paro_key = dcp.codigo_paro_key LEFT JOIN bi_temperas.dim_severidad_paro dsp ON fp.severidad_key = dsp.severidad_key LEFT JOIN bi_temperas.dim_agente_intervencion dai ON fp.agente_key = dai.agente_key WHERE ('$maquina' = 'Todos' OR dm.codigo_maquina = '$maquina') ORDER BY fp.paro_id DESC LIMIT 50;",
+          "refId": "A"
+        }
+      ],
+      "title": "Auditoría de Paros en Tiempo Real (Últimos 50 Eventos)",
+      "type": "table"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 39,
+  "style": "dark",
+  "tags": ["OEE", "Envasado", "Producción", "Mantenimiento"],
+  "templating": {
+    "list": [
+      {
+        "current": { "selected": true, "text": "Todos", "value": "Todos" },
+        "datasource": "PostgreSQL-BITemperas",
+        "definition": "SELECT codigo_maquina FROM bi_temperas.dim_maquina;",
+        "hide": 0,
+        "includeAll": true,
+        "allValue": "Todos",
+        "label": "Línea / Máquina",
+        "name": "maquina",
+        "options": [],
+        "query": "SELECT codigo_maquina FROM bi_temperas.dim_maquina;",
+        "refresh": 1,
+        "type": "query"
+      }
+    ]
+  },
+  "time": { "from": "now-30d", "to": "now" },
+  "timepicker": {
+    "refresh_intervals": ["5s", "10s", "30s", "1m", "5m"]
+  },
+  "timezone": "browser",
+  "title": "Tablero de Monitoreo Near Real-Time - Líneas de Envasado",
+  "uid": "monitoreo_envasado_v1",
+  "version": 1
+}

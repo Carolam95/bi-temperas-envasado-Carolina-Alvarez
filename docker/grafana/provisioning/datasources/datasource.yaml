@@ -1,0 +1,20 @@
+apiVersion: 1
+
+datasources:
+  - name: PostgreSQL-BITemperas
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: bi_temperas
+    user: postgres
+    secureJsonData:
+      password: postgres_secure_pass_2025
+    jsonData:
+      sslmode: disable
+      maxOpenConns: 20
+      maxIdleConns: 10
+      connMaxLifetime: 14400
+      postgresVersion: 1500
+      timescaledb: false
+    isDefault: true
+    editable: true

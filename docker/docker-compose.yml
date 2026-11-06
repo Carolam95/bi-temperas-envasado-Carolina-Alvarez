@@ -1,0 +1,51 @@
+services:
+  # ===========================================================================
+  # 1. MOTOR DE BASE DE DATOS RELACIONAL: POSTGRESQL 15
+  # ===========================================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: bi_temperas_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bi_temperas}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres_secure_pass_2025}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../sql/01_ddl_postgresql.sql:/docker-entrypoint-initdb.d/01_ddl.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-bi_temperas}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ===========================================================================
+  # 2. TABLERO DE MONITOREO NEAR REAL-TIME: GRAFANA
+  #    CON AUTO-PROVISIONING COMPLETO (DATASOURCE Y DASHBOARD AUTOMÁTICOS)
+  # ===========================================================================
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: bi_temperas_grafana
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=
+    volumes:
+      - grafanadata:/var/lib/grafana
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+
+volumes:
+  pgdata:
+    driver: local
+  grafanadata:
+    driver: local

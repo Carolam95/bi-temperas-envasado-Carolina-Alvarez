@@ -1,0 +1,382 @@
+{
+  "Tiempos": {
+    "max_row": 59,
+    "max_col": 19,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "maquina",
+        "referencia",
+        "",
+        "maquina",
+        "referencia",
+        "",
+        "maquina",
+        "referencia",
+        "",
+        "maquina",
+        "referencia",
+        "",
+        "Operarios"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Vinilos_1",
+        "Alocolor 22cc (6 col)",
+        "",
+        "Vinilos_2",
+        "No aplica",
+        "",
+        "Vinilos_3",
+        "Alocolor 22cc (12 col)",
+        "",
+        "Vinilos_4",
+        "Alocolor 22cc (12 col)",
+        "",
+        "Alba"
+      ],
+      [
+        "",
+        "Horas trabajadas",
+        "=horasTrabajadas",
+        "",
+        "",
+        "",
+        "Vinilos_2",
+        "Alocolor 22cc (6 col)",
+        "",
+        "Vinilos_2",
+        "Parchesitos 125 cc",
+        "",
+        "Vinilos_3",
+        "Alocolor 22cc (6 col)",
+        "",
+        "Vinilos_4",
+        "Alocolor 22cc (6 col)",
+        "",
+        "Alexandra"
+      ],
+      [
+        "",
+        "Meta por hora",
+        "=metaPorHora",
+        "",
+        "",
+        "",
+        "Vinilos_1",
+        "Alpha 30 cc (7 col)",
+        "",
+        "Vinilos_2",
+        "Pintorcitos 70cc (6 col)",
+        "",
+        "Vinilos_3",
+        "Alpha 30 cc (7 col)",
+        "",
+        "Vinilos_4",
+        "Aprendo 22cc (6 col)",
+        "",
+        "Ana"
+      ]
+    ]
+  },
+  "Calculadora de tiempos": {
+    "max_row": 40,
+    "max_col": 15,
+    "sample_rows": []
+  },
+  "Registro": {
+    "max_row": 27,
+    "max_col": 15,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "REGISTRO HORA A HORA",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "MAQUINA",
+        "Vinilos_3",
+        "",
+        "Sub-codigo 1",
+        "",
+        "",
+        "Código 1",
+        "",
+        "",
+        "Falla del sistema electromecánico y/o de control",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "TURNO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Código 2",
+        "",
+        "",
+        "Espera de soporte de mantenimiento",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  "Base De Datos": {
+    "max_row": 8217,
+    "max_col": 58,
+    "sample_rows": []
+  },
+  "Base de datos de Sub codigos": {
+    "max_row": 1260,
+    "max_col": 19,
+    "sample_rows": []
+  },
+  "TABLA CODIGOS": {
+    "max_row": 41,
+    "max_col": 8,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "Maquina vinilos y temperas",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "ÁREA DE IMPACTO",
+        "CODIGOS DE PARO",
+        "",
+        "1. FALLA DEL SISTEMA ELECTRO-MECÁNICO Y/O DE CONTROL"
+      ]
+    ]
+  },
+  "Hoja4": {
+    "max_row": 38,
+    "max_col": 6,
+    "sample_rows": [
+      [
+        "Año",
+        "2023",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "Etiquetas de columna",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Valores",
+        "Vinilos_1",
+        "Vinilos_2",
+        "Vinilos_3",
+        "Vinilos_4",
+        ""
+      ]
+    ]
+  },
+  "TD_prodMaq": {
+    "max_row": 15,
+    "max_col": 3,
+    "sample_rows": [
+      [
+        "Suma de % Productividad",
+        "",
+        ""
+      ],
+      [
+        "",
+        "Vinilos_2",
+        "Total general"
+      ],
+      [
+        "enero",
+        "0.6793456032719836",
+        "0.6793456032719836"
+      ],
+      [
+        "febrero",
+        "0.5757188498402557",
+        "0.5757188498402557"
+      ]
+    ]
+  },
+  "prodMaquina": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "prodAño": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "TD_prodAño": {
+    "max_row": 16,
+    "max_col": 4,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "Suma de % Productividad",
+        "Etiquetas de columna"
+      ],
+      [
+        "",
+        "",
+        "Etiquetas de fila",
+        "2024"
+      ]
+    ]
+  },
+  "ajusteOperativo": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "prodCodigo": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "TD_prodCodigo": {
+    "max_row": 22,
+    "max_col": 4,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "Valores",
+        ""
+      ],
+      [
+        "",
+        "",
+        "[01] Falla del sistema electromecánico y/o de control",
+        "0.006342221071705927"
+      ]
+    ]
+  },
+  "TD_fallaMecanica": {
+    "max_row": 12,
+    "max_col": 4,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "Etiquetas de fila",
+        "Suma de Codigo 1 en horas"
+      ],
+      [
+        "",
+        "",
+        "1.2 SISTEMA DE DOSIFICACIÓN",
+        "0.08163265306122448"
+      ]
+    ]
+  },
+  "TD_ajusteOperativo": {
+    "max_row": 16,
+    "max_col": 7,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "Suma de Codigo 5 en horas",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "Operarios",
+        "Personal_de_mantenimiento",
+        "Total general",
+        ""
+      ]
+    ]
+  },
+  "Hoja1": {
+    "max_row": 1,
+    "max_col": 1,
+    "sample_rows": []
+  },
+  "fallaMecanica": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "TD_novPotencia": {
+    "max_row": 7,
+    "max_col": 4,
+    "sample_rows": [
+      [
+        "",
+        "",
+        "Etiquetas de fila",
+        "Suma de Codigo 3 en horas"
+      ],
+      [
+        "",
+        "",
+        "3.3 Falla en la red neumática o el compresor",
+        "0.2"
+      ]
+    ]
+  },
+  "novPotencia": {
+    "max_row": 15,
+    "max_col": 4,
+    "sample_rows": []
+  },
+  "Tablas Desplegables": {
+    "max_row": 262,
+    "max_col": 52,
+    "sample_rows": []
+  }
+}

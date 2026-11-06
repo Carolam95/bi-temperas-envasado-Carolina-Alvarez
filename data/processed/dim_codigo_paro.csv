@@ -1,0 +1,85 @@
+codigo_paro_key,area_impacto,codigo_numero,codigo_paro_texto,subcodigo,descripcion_subcodigo,componente,tipo_paro
+1,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,General,General [01] Falla del sistema electromecánico y/o de control,General,No Programado
+2,Mantenimiento,2,[02] Espera de soporte de mantenimiento,General,General [02] Espera de soporte de mantenimiento,General,No Programado
+3,Mantenimiento,3,"[03] Novedad en los sistemas de potencia (Aire, energía, vapor)",General,"General [03] Novedad en los sistemas de potencia (Aire, energía, vapor)",General,No Programado
+4,Mantenimiento,4,[04] Mantenimiento preventivo,General,General [04] Mantenimiento preventivo,General,Programado
+5,Producción,5,[05] Ajuste operativo,General,General [05] Ajuste operativo,General,No Programado
+6,Producción,6,[06] Limpieza por derrame operativo,General,General [06] Limpieza por derrame operativo,General,No Programado
+7,Producción,7,[07] Alistamiento de máquina / Cambio de referencia,General,General [07] Alistamiento de máquina / Cambio de referencia,General,Programado
+8,Producción,8,[08] Capacitación / Reunión,General,General [08] Capacitación / Reunión,General,Programado
+9,Producción,9,[09] Falta de operario,General,General [09] Falta de operario,General,No Programado
+10,Producción,10,[10] Paro por ventaja/evacuación,General,General [10] Paro por ventaja/evacuación,General,Programado
+11,Producción,11,[11] Reproceso,General,General [11] Reproceso,General,No Programado
+12,Calidad,12,[12] Materia prima defectuosa,General,General [12] Materia prima defectuosa,General,No Programado
+13,Calidad,13,[13] En espera por el aval del laboratorio de microbiología,General,General [13] En espera por el aval del laboratorio de microbiología,General,No Programado
+14,Almacén de materias primas,14,[14] Falta de materia prima,General,General [14] Falta de materia prima,General,No Programado
+15,Paro programado,15,"[15] Cambio de insumos (Roscadores, O'ring, Etiquetas)",General,"General [15] Cambio de insumos (Roscadores, O'ring, Etiquetas)",General,Programado
+16,Paro programado,16,[16] Alimentación y aseo de la zona de trabajo y la máquina,General,General [16] Alimentación y aseo de la zona de trabajo y la máquina,General,Programado
+17,Paro programado,17,[17] Pausa activa,General,General [17] Pausa activa,General,Programado
+18,Paro programado,18,[18] Desinfección,General,General [18] Desinfección,General,Programado
+19,Producción,5,[05] Ajuste operativo,5.8,5.8 Banda de sujeción y roscadores,5.8 Banda de sujeción y roscadores,No Programado
+20,Producción,5,[05] Ajuste operativo,5.2,"5.2 Sistema de dosificación de pintura, frontal posterior","5.2 Sistema de dosificación de pintura, frontal posterior",No Programado
+21,Producción,5,[05] Ajuste operativo,5.11,5.11 Lavado de boquilla,5.11 Lavado de boquilla,No Programado
+22,Producción,5,[05] Ajuste operativo,5.5,5.5 Transfer y pisador de tapa,5.5 Transfer y pisador de tapa,No Programado
+23,Producción,5,[05] Ajuste operativo,5.7,5.7 Video Jet,5.7 Video Jet,No Programado
+24,Producción,5,[05] Ajuste operativo,5.9,5.9 Sistema de etiquetado,5.9 Sistema de etiquetado,No Programado
+25,Producción,5,[05] Ajuste operativo,5.10,5.10 Purga de color,5.10 Purga de color,No Programado
+26,Producción,5,[05] Ajuste operativo,5.3,5.3 Banda transportadora de entrada,5.3 Banda transportadora de entrada,No Programado
+27,Producción,5,[05] Ajuste operativo,5.6,5.6 Sistema alimentador de tapa y tobogan,5.6 Sistema alimentador de tapa y tobogan,No Programado
+28,Producción,5,[05] Ajuste operativo,5.1,5.1 Sistema alimentador de envases,5.1 Sistema alimentador de envases,No Programado
+29,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1.,1.1.B Motor,1.1.B Motor,No Programado
+30,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2.,1.2.B Ajuste de sensor,1.2.B Ajuste de sensor,No Programado
+31,Producción,5,[05] Ajuste operativo,5.4,5.4 Banda transportadora de salida,5.4 Banda transportadora de salida,No Programado
+32,Mantenimiento,3,"[03] Novedad en los sistemas de potencia (Aire, energía, vapor)",3.3,3.3 Falla en la red neumática o el compresor,3.3 Falla en la red neumática o el compresor,No Programado
+33,Mantenimiento,3,"[03] Novedad en los sistemas de potencia (Aire, energía, vapor)",3.2,3.2 Fallo en la red pública,3.2 Fallo en la red pública,No Programado
+34,Producción,5,[05] Ajuste operativo,Sin,Sin especificar,Sin especificar,No Programado
+35,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1,1.1 SISTEMA ALIMENTADOR DE ENVASES,1.1 SISTEMA ALIMENTADOR DE ENVASES,No Programado
+36,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5,1.5 SISTEMA DE ALIMENTACIÓN DE TAPA,1.5 SISTEMA DE ALIMENTACIÓN DE TAPA,No Programado
+37,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.8,1.8 SISTEMA ETIQUETADORA,1.8 SISTEMA ETIQUETADORA,No Programado
+38,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1.,1.1.C Sensor,1.1.C Sensor,No Programado
+39,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.7,1.7 SISTEMA DE SUJECIÓN Y ROSCADORES,1.7 SISTEMA DE SUJECIÓN Y ROSCADORES,No Programado
+40,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.4.,1.4.B Pisador de tapa,1.4.B Pisador de tapa,No Programado
+41,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.6.,1.6.B Sensor,1.6.B Sensor,No Programado
+42,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2,1.2 SISTEMA DE DOSIFICACIÓN,1.2 SISTEMA DE DOSIFICACIÓN,No Programado
+43,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.7.,1.7.B Roscadores,1.7.B Roscadores,No Programado
+44,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2.,1.2.C Cambio de Valvula,1.2.C Cambio de Valvula,No Programado
+45,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.4.,1.4.3 Sensor,1.4.3 Sensor,No Programado
+46,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.3,1.3 SISTEMA DE BANDA DE ENTRADA,1.3 SISTEMA DE BANDA DE ENTRADA,No Programado
+47,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.7.,1.7.A Banda de sujeción,1.7.A Banda de sujeción,No Programado
+48,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2.,1.2.E O'Ring,1.2.E O'Ring,No Programado
+49,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.6,1.6 SISTEMA VIDEO JET,1.6 SISTEMA VIDEO JET,No Programado
+50,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1.,1.1.A Banda,1.1.A Banda,No Programado
+51,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.4.,1.4.A Motor del transfer,1.4.A Motor del transfer,No Programado
+52,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.3.,1.3.B Motor,1.3.B Motor,No Programado
+53,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2.,1.2.A Cambio de racores,1.2.A Cambio de racores,No Programado
+54,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5.,1.5.A Banda,1.5.A Banda,No Programado
+55,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.3.,1.3.A Banda,1.3.A Banda,No Programado
+56,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.8.,1.8.C Sensor,1.8.C Sensor,No Programado
+57,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.4,1.4 SISTEMA DE TAPADO,1.4 SISTEMA DE TAPADO,No Programado
+58,Producción,5,[05] Ajuste operativo,4.2,"4.2 SISTEMA DOSIFICADOR DE PINTURA, FRONTAL Y POSTERIOR.","4.2 SISTEMA DOSIFICADOR DE PINTURA, FRONTAL Y POSTERIOR.",No Programado
+59,Producción,5,[05] Ajuste operativo,4.4,4.4 TRANSFER Y PISADOR DE TAPADO,4.4 TRANSFER Y PISADOR DE TAPADO,No Programado
+60,Producción,5,[05] Ajuste operativo,4.6,4.6 VIDEO JET,4.6 VIDEO JET,No Programado
+61,Producción,5,[05] Ajuste operativo,4.5,4.5 SISTEMA ALIMENTADOR DE TAPA. YBTOBOGAN,4.5 SISTEMA ALIMENTADOR DE TAPA. YBTOBOGAN,No Programado
+62,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2C,1.2C CAMBIO DE VALVULA,1.2C CAMBIO DE VALVULA,No Programado
+63,Producción,5,[05] Ajuste operativo,4.7,4.7 BANDA SUJECION Y ROSCADORES,4.7 BANDA SUJECION Y ROSCADORES,No Programado
+64,Producción,5,[05] Ajuste operativo,4.1,4.1 SISTEMA ALIMENTACION DE ENVASE,4.1 SISTEMA ALIMENTACION DE ENVASE,No Programado
+65,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1B,1.1B MOTOR,1.1B MOTOR,No Programado
+66,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.4,1.4 TRANSFER Y PISADOR DE TAPA,1.4 TRANSFER Y PISADOR DE TAPA,No Programado
+67,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.7,1.7 BANDA DE SUJECION Y ROSCADORES,1.7 BANDA DE SUJECION Y ROSCADORES,No Programado
+68,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.6,1.6 VIDEO JET,1.6 VIDEO JET,No Programado
+69,Producción,5,[05] Ajuste operativo,4.8,4.8 SISTEMA DE ETIQUETADO,4.8 SISTEMA DE ETIQUETADO,No Programado
+70,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.7A,1.7A CAMBIO DE ROSCADORES,1.7A CAMBIO DE ROSCADORES,No Programado
+71,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2B,1.2B AJUSTE DE SENSOR,1.2B AJUSTE DE SENSOR,No Programado
+72,Producción,5,[05] Ajuste operativo,4.3,4.3 BANDA TRASPORTADORA DE ENTRADA,4.3 BANDA TRASPORTADORA DE ENTRADA,No Programado
+73,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5,1.5 SISTEMA ALIMENTADOR DE TAPA,1.5 SISTEMA ALIMENTADOR DE TAPA,No Programado
+74,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2A,1.2A CAMBIO DE RACORES,1.2A CAMBIO DE RACORES,No Programado
+75,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1.,1.1.C SENSOR,1.1.C SENSOR,No Programado
+76,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2D,1.2D RETENEDORES Y ORING,1.2D RETENEDORES Y ORING,No Programado
+77,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.1A,1.1A BANDA,1.1A BANDA,No Programado
+78,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5A,1.5A BANDA,1.5A BANDA,No Programado
+79,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.3A,1.3A BANDA,1.3A BANDA,No Programado
+80,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5C,1.5C SENSOR,1.5C SENSOR,No Programado
+81,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.5B,1.5B MOTOR,1.5B MOTOR,No Programado
+82,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.2A,1.2A CAMBIO DE RAGORES,1.2A CAMBIO DE RAGORES,No Programado
+83,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.8C,1.8C SENSOR,1.8C SENSOR,No Programado
+84,Mantenimiento,1,[01] Falla del sistema electromecánico y/o de control,1.3B,1.3B MOTOR,1.3B MOTOR,No Programado

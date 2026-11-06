@@ -1,0 +1,8 @@
+turno_key,codigo_turno,nombre_turno,duracion_horas,tipo_jornada
+1,T1,6am-2pm (Turno 1),8.0,Rotativo Regular
+2,T2,2pm-10pm (Turno 2),8.0,Rotativo Regular
+3,T3,10pm-6am (Turno 3),8.0,Rotativo Regular
+4,T4,6am-4:30pm (Jornada Especial),10.5,Jornada Continua
+5,T5,6am-6pm (Turno 12h Día),12.0,Extendido
+6,T6,6pm-6am (Turno 12h Noche),12.0,Extendido
+7,T7,Turno No Asignado,8.0,No Especificado

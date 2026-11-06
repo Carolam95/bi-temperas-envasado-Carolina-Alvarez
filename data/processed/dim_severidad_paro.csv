@@ -1,0 +1,5 @@
+severidad_key,rango_duracion,nivel_severidad,es_alerta_grafana,protocolo_escalamiento
+1,< 5 min,Micro-paro,False,Registro operacional local
+2,5-15 min,Paro Menor,False,Atención operaria / ajuste rápido
+3,15-45 min,Paro Significativo,False,Intervención de mantenimiento de turno
+4,> 45 min,Paro Crítico,True,Alerta en Grafana y escalamiento a Jefatura de Mantenimiento

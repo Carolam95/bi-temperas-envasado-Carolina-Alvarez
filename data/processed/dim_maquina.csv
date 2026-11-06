@@ -1,0 +1,5 @@
+maquina_key,codigo_maquina,nombre_linea,tipo_tecnologia,capacidad_diseno_u_min,ubicacion_planta,estado_operativo
+1,Vinilos_1,Línea de Envasado Vinilos_1,Envasadora Automática Rotativa,72.0,Planta Principal - Nave Envasado,Activa
+2,Vinilos_2,Línea de Envasado Vinilos_2,Envasadora Automática Rotativa,72.0,Planta Principal - Nave Envasado,Activa
+3,Vinilos_3,Línea de Envasado Vinilos_3,Envasadora Automática Rotativa,72.0,Planta Principal - Nave Envasado,Activa
+4,Vinilos_4,Línea de Envasado Vinilos_4,Envasadora Automática Rotativa,72.0,Planta Principal - Nave Envasado,Activa
